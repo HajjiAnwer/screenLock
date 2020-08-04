@@ -1,0 +1,20 @@
+PODS:
+  - SwiftDate (5.1.0)
+  - Toast-Swift (5.0.1)
+
+DEPENDENCIES:
+  - SwiftDate (~> 5.0)
+  - Toast-Swift (= 5.0.1)
+
+SPEC REPOS:
+  trunk:
+    - SwiftDate
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  SwiftDate: 6329e58969a2de31cea7f1ee1143b247693196e7
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+
+PODFILE CHECKSUM: 609f8b9b50f0cf5b3f685e89902bc71c101dd6ac
+
+COCOAPODS: 1.9.3

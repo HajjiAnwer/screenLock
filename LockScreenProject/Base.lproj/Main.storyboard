@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LockScreenProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7r-yl-Kq0" userLabel="placeHolder">
+                                <rect key="frame" x="108" y="133" width="198" height="16"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Did-vj-cZX" userLabel="placeHolder1" customClass="PasscodePlaceholder" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="NNt-En-fo5"/>
+                                            <constraint firstAttribute="height" constant="16" id="tCV-fb-Tbf"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                <color key="value" red="0.45490196078431372" green="0.59999999999999998" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
+                                                <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x12-9y-fvp" userLabel="placeHolder2" customClass="PasscodePlaceholder" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="26" y="0.0" width="16" height="16"/>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.92549019610000005" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="Dik-fE-9gQ"/>
+                                            <constraint firstAttribute="width" constant="16" id="HT6-sU-0JW"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
+                                                <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNE-dM-hjd" userLabel="placeHolder3" customClass="PasscodePlaceholder" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="52" y="0.0" width="16" height="16"/>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.92549019610000005" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="mM8-Id-gEb"/>
+                                            <constraint firstAttribute="height" constant="16" id="zID-qG-TxU"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
+                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ApA-AX-AC4" userLabel="placeHolder4" customClass="PasscodePlaceholder" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="78" y="0.0" width="16" height="16"/>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.92549019610000005" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="0OU-Mf-jP2"/>
+                                            <constraint firstAttribute="width" constant="16" id="avq-ma-QEr"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
+                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1h-T7-8tI" userLabel="placeHolder5" customClass="PasscodePlaceholder" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="104" y="0.0" width="16" height="16"/>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.92549019610000005" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="FjO-gs-DzI"/>
+                                            <constraint firstAttribute="width" constant="16" id="iTL-og-aKx"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
+                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yac-W4-Ljh" userLabel="placeHolder6" customClass="PasscodePlaceholder" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="130" y="0.0" width="16" height="16"/>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.92549019610000005" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="j8T-Kd-9z8"/>
+                                            <constraint firstAttribute="width" constant="16" id="jZa-ii-TP5"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
+                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSd-xC-OYy" userLabel="placeHolder7" customClass="PasscodePlaceholder" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="156" y="0.0" width="16" height="16"/>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.92549019610000005" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="Lsc-ir-5RO"/>
+                                            <constraint firstAttribute="height" constant="16" id="bMJ-xY-vgV"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
+                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUA-ey-zga" userLabel="placeHolder8" customClass="PasscodePlaceholder" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="182" y="0.0" width="16" height="16"/>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.92549019610000005" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="EaB-E6-CoA"/>
+                                            <constraint firstAttribute="height" constant="16" id="Wva-3v-2qB"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
+                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="1N9-wb-yXm"/>
+                                    <constraint firstItem="TNE-dM-hjd" firstAttribute="top" secondItem="Did-vj-cZX" secondAttribute="top" id="1OE-xi-Hoh"/>
+                                    <constraint firstItem="x12-9y-fvp" firstAttribute="leading" secondItem="Did-vj-cZX" secondAttribute="trailing" constant="10" id="6eY-28-Gg2"/>
+                                    <constraint firstItem="iUA-ey-zga" firstAttribute="leading" secondItem="VSd-xC-OYy" secondAttribute="trailing" constant="10" id="7Ww-DQ-pEn"/>
+                                    <constraint firstItem="x12-9y-fvp" firstAttribute="top" secondItem="Did-vj-cZX" secondAttribute="top" id="AUO-G2-4Mv"/>
+                                    <constraint firstItem="ApA-AX-AC4" firstAttribute="top" secondItem="Did-vj-cZX" secondAttribute="top" id="CdY-mF-zvz"/>
+                                    <constraint firstItem="E1h-T7-8tI" firstAttribute="leading" secondItem="ApA-AX-AC4" secondAttribute="trailing" constant="10" id="Exu-tm-vVp"/>
+                                    <constraint firstItem="VSd-xC-OYy" firstAttribute="top" secondItem="Did-vj-cZX" secondAttribute="top" id="Gct-j7-qsp"/>
+                                    <constraint firstItem="VSd-xC-OYy" firstAttribute="leading" secondItem="yac-W4-Ljh" secondAttribute="trailing" constant="10" id="J1N-ht-DuI"/>
+                                    <constraint firstItem="E1h-T7-8tI" firstAttribute="top" secondItem="Did-vj-cZX" secondAttribute="top" id="JSz-ux-IPg"/>
+                                    <constraint firstItem="yac-W4-Ljh" firstAttribute="leading" secondItem="E1h-T7-8tI" secondAttribute="trailing" constant="10" id="Mlp-4n-2m4"/>
+                                    <constraint firstItem="Did-vj-cZX" firstAttribute="leading" secondItem="T7r-yl-Kq0" secondAttribute="leading" id="STq-6v-8KV"/>
+                                    <constraint firstItem="ApA-AX-AC4" firstAttribute="leading" secondItem="TNE-dM-hjd" secondAttribute="trailing" constant="10" id="cIf-Qm-dGL"/>
+                                    <constraint firstItem="Did-vj-cZX" firstAttribute="top" secondItem="T7r-yl-Kq0" secondAttribute="top" id="jB5-aR-IBn"/>
+                                    <constraint firstItem="yac-W4-Ljh" firstAttribute="top" secondItem="Did-vj-cZX" secondAttribute="top" id="nW1-YQ-IzA"/>
+                                    <constraint firstItem="iUA-ey-zga" firstAttribute="top" secondItem="Did-vj-cZX" secondAttribute="top" id="p4N-lI-bME"/>
+                                    <constraint firstAttribute="width" constant="198" id="r1P-XH-DnL"/>
+                                    <constraint firstItem="TNE-dM-hjd" firstAttribute="leading" secondItem="x12-9y-fvp" secondAttribute="trailing" constant="10" id="tbN-WL-K3N"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9E-Su-Qhb" userLabel="viewButton">
+                                <rect key="frame" x="87" y="173" width="240" height="343"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wju-s3-y4V" customClass="ButtonPasscode" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="2" width="60" height="60"/>
+                                        <state key="normal" title="1"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tagButton" value="1"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="button1DidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NjJ-H1-Svk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEE-KY-V5b" customClass="ButtonPasscode" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="90" y="2" width="60" height="60"/>
+                                        <state key="normal" title="2"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tagButton" value="2"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="button2DidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="maK-0P-FLA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cz-ih-PGH" customClass="ButtonPasscode" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="178" y="2" width="60" height="60"/>
+                                        <state key="normal" title="3"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tagButton" value="3"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="button3DidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDd-6g-cLi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhP-Wt-kWl" customClass="ButtonPasscode" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="72" width="60" height="60"/>
+                                        <state key="normal" title="4"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tagButton" value="4"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="button4DidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="31e-Em-Hs0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLL-QJ-lb2" customClass="ButtonPasscode" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="90" y="72" width="60" height="60"/>
+                                        <state key="normal" title="5"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tagButton" value="5"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="button5DidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wyk-fW-Xfz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUX-AR-MZS" customClass="ButtonPasscode" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="178" y="72" width="60" height="60"/>
+                                        <state key="normal" title="6"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tagButton" value="6"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="button6DidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qAX-Lr-9n4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ou5-DB-AJF" customClass="ButtonPasscode" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="142" width="60" height="60"/>
+                                        <state key="normal" title="7"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tagButton" value="7"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="button7DidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vgn-2t-kFG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoS-jn-QSl" customClass="ButtonPasscode" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="90" y="142" width="60" height="60"/>
+                                        <state key="normal" title="8"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tagButton" value="8"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="button8DidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vxr-WZ-itC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cds-5x-AKp" customClass="ButtonPasscode" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="178" y="142" width="60" height="60"/>
+                                        <state key="normal" title="9"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tagButton" value="9"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="button9DidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bfJ-gc-hWY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIm-yN-1NK" customClass="ButtonPasscode" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="90" y="212" width="60" height="60"/>
+                                        <state key="normal" title="0"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tagButton" value="0"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="button0DidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f0X-g5-GZM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUt-hE-204" customClass="ButtonPasscode" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="178" y="212" width="60" height="60"/>
+                                        <state key="normal" title="Delete"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tagButton" value="Delete"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="deleteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QyT-hE-2mv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnK-2y-gwH" customClass="ButtonPasscode" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="212" width="60" height="60"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tagButton" value="Cancel"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="cancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ctP-sw-nQg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6e-5g-WgP" customClass="ButtonPasscode" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="90" y="282" width="60" height="60"/>
+                                        <state key="normal" title="Enter"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonEnterDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Fv-LB-VjP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="uIm-yN-1NK" firstAttribute="top" secondItem="KoS-jn-QSl" secondAttribute="bottom" constant="10" id="0Xl-WY-zoM"/>
+                                    <constraint firstItem="3cz-ih-PGH" firstAttribute="top" secondItem="A9E-Su-Qhb" secondAttribute="top" constant="2" id="2QI-bw-OEc"/>
+                                    <constraint firstItem="Wju-s3-y4V" firstAttribute="leading" secondItem="A9E-Su-Qhb" secondAttribute="leading" constant="2" id="4i8-C4-fTc"/>
+                                    <constraint firstAttribute="height" constant="343" id="CG4-Oz-zEj"/>
+                                    <constraint firstItem="HhP-Wt-kWl" firstAttribute="centerX" secondItem="Wju-s3-y4V" secondAttribute="centerX" id="Cmy-qy-gt7"/>
+                                    <constraint firstItem="oLL-QJ-lb2" firstAttribute="top" secondItem="jEE-KY-V5b" secondAttribute="bottom" constant="10" id="EHb-9A-qTe"/>
+                                    <constraint firstItem="Y6e-5g-WgP" firstAttribute="centerX" secondItem="uIm-yN-1NK" secondAttribute="centerX" id="JHX-Gt-msr"/>
+                                    <constraint firstItem="cds-5x-AKp" firstAttribute="centerX" secondItem="TUX-AR-MZS" secondAttribute="centerX" id="LtW-XM-2ha"/>
+                                    <constraint firstItem="jEE-KY-V5b" firstAttribute="centerX" secondItem="A9E-Su-Qhb" secondAttribute="centerX" id="SDe-BK-vnY"/>
+                                    <constraint firstItem="HnK-2y-gwH" firstAttribute="top" secondItem="Ou5-DB-AJF" secondAttribute="bottom" constant="10" id="Tw6-ph-1AS"/>
+                                    <constraint firstItem="HUt-hE-204" firstAttribute="centerX" secondItem="cds-5x-AKp" secondAttribute="centerX" id="UEf-HS-wlh"/>
+                                    <constraint firstAttribute="width" constant="240" id="VFn-jc-hHU"/>
+                                    <constraint firstItem="HnK-2y-gwH" firstAttribute="centerX" secondItem="Ou5-DB-AJF" secondAttribute="centerX" id="WT5-8f-NLe"/>
+                                    <constraint firstItem="HhP-Wt-kWl" firstAttribute="top" secondItem="Wju-s3-y4V" secondAttribute="bottom" constant="10" id="Y7u-0z-TCe"/>
+                                    <constraint firstItem="uIm-yN-1NK" firstAttribute="centerX" secondItem="KoS-jn-QSl" secondAttribute="centerX" id="cCW-N0-TFE"/>
+                                    <constraint firstItem="Ou5-DB-AJF" firstAttribute="centerX" secondItem="HhP-Wt-kWl" secondAttribute="centerX" id="e3m-Qq-6I9"/>
+                                    <constraint firstAttribute="trailing" secondItem="3cz-ih-PGH" secondAttribute="trailing" constant="2" id="fgu-6H-kG3"/>
+                                    <constraint firstItem="TUX-AR-MZS" firstAttribute="centerX" secondItem="3cz-ih-PGH" secondAttribute="centerX" id="fnh-Mz-ehU"/>
+                                    <constraint firstItem="KoS-jn-QSl" firstAttribute="centerX" secondItem="oLL-QJ-lb2" secondAttribute="centerX" id="gDE-bt-Hup"/>
+                                    <constraint firstItem="KoS-jn-QSl" firstAttribute="top" secondItem="oLL-QJ-lb2" secondAttribute="bottom" constant="10" id="hdy-XA-H0F"/>
+                                    <constraint firstItem="HUt-hE-204" firstAttribute="top" secondItem="cds-5x-AKp" secondAttribute="bottom" constant="10" id="kcy-Yb-Ykg"/>
+                                    <constraint firstItem="TUX-AR-MZS" firstAttribute="top" secondItem="3cz-ih-PGH" secondAttribute="bottom" constant="10" id="mR7-28-QWk"/>
+                                    <constraint firstItem="Y6e-5g-WgP" firstAttribute="top" secondItem="uIm-yN-1NK" secondAttribute="bottom" constant="10" id="oWr-sG-g4o"/>
+                                    <constraint firstItem="Wju-s3-y4V" firstAttribute="top" secondItem="A9E-Su-Qhb" secondAttribute="top" constant="2" id="rDN-zV-R58"/>
+                                    <constraint firstItem="cds-5x-AKp" firstAttribute="top" secondItem="TUX-AR-MZS" secondAttribute="bottom" constant="10" id="sEQ-6r-rS4"/>
+                                    <constraint firstItem="Ou5-DB-AJF" firstAttribute="top" secondItem="HhP-Wt-kWl" secondAttribute="bottom" constant="10" id="sg8-pM-dQ2"/>
+                                    <constraint firstItem="oLL-QJ-lb2" firstAttribute="centerX" secondItem="jEE-KY-V5b" secondAttribute="centerX" id="xAp-UJ-qdm"/>
+                                    <constraint firstItem="jEE-KY-V5b" firstAttribute="top" secondItem="A9E-Su-Qhb" secondAttribute="top" constant="2" id="zmE-7o-gLh"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwD-5i-cCG" customClass="ButtonPasscode" customModule="LockScreenProject" customModuleProvider="target">
+                                <rect key="frame" x="127" y="818" width="160" height="30"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.23529411759999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="5c4-7e-NNP"/>
+                                    <constraint firstAttribute="height" constant="30" id="Q9Y-t1-0TH"/>
+                                </constraints>
+                                <state key="normal" title="FaceId Authentication">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPG-TY-cJB">
+                                <rect key="frame" x="197" y="786" width="20" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="H4i-lT-o4r"/>
+                                    <constraint firstAttribute="width" constant="20" id="lbf-cz-lmE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3P-hq-TKL">
+                                <rect key="frame" x="108" y="169" width="198" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="bt1-3q-Gow"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter passcode" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqh-9t-HRJ">
+                                <rect key="frame" x="67.5" y="83" width="279" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CnC-Re-Dqg"/>
+                                    <constraint firstAttribute="width" constant="279" id="asD-iV-ELe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="y3P-hq-TKL" firstAttribute="width" secondItem="T7r-yl-Kq0" secondAttribute="width" id="0fL-3Z-uvS"/>
+                            <constraint firstItem="Tqh-9t-HRJ" firstAttribute="centerX" secondItem="T7r-yl-Kq0" secondAttribute="centerX" id="1u5-QL-vVa"/>
+                            <constraint firstItem="zwD-5i-cCG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2lS-SY-kB9"/>
+                            <constraint firstItem="Tqh-9t-HRJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6DB-sh-uYc"/>
+                            <constraint firstItem="A9E-Su-Qhb" firstAttribute="top" secondItem="T7r-yl-Kq0" secondAttribute="bottom" constant="24" id="7i9-03-Pp6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zwD-5i-cCG" secondAttribute="bottom" constant="14" id="KPe-oB-z7W"/>
+                            <constraint firstItem="zwD-5i-cCG" firstAttribute="centerX" secondItem="YPG-TY-cJB" secondAttribute="centerX" id="N7Y-CN-Fnk"/>
+                            <constraint firstItem="y3P-hq-TKL" firstAttribute="top" secondItem="T7r-yl-Kq0" secondAttribute="bottom" constant="20" id="RPI-oC-AMM"/>
+                            <constraint firstItem="zwD-5i-cCG" firstAttribute="top" secondItem="YPG-TY-cJB" secondAttribute="bottom" constant="15" id="ghU-yV-AoK"/>
+                            <constraint firstItem="T7r-yl-Kq0" firstAttribute="top" secondItem="Tqh-9t-HRJ" secondAttribute="bottom" constant="20" id="i0U-aH-L52"/>
+                            <constraint firstItem="A9E-Su-Qhb" firstAttribute="centerX" secondItem="T7r-yl-Kq0" secondAttribute="centerX" id="uR8-Ev-GZR"/>
+                            <constraint firstItem="Tqh-9t-HRJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="uSg-HA-lvC"/>
+                            <constraint firstItem="y3P-hq-TKL" firstAttribute="centerX" secondItem="T7r-yl-Kq0" secondAttribute="centerX" id="weX-XL-mqS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="button0" destination="uIm-yN-1NK" id="aUL-32-bYK"/>
+                        <outlet property="button1" destination="Wju-s3-y4V" id="5dC-au-vsc"/>
+                        <outlet property="button2" destination="jEE-KY-V5b" id="cS6-Np-j8o"/>
+                        <outlet property="button3" destination="3cz-ih-PGH" id="XTf-83-GD0"/>
+                        <outlet property="button4" destination="HhP-Wt-kWl" id="eQC-EJ-CJK"/>
+                        <outlet property="button5" destination="oLL-QJ-lb2" id="t46-lO-PaH"/>
+                        <outlet property="button6" destination="TUX-AR-MZS" id="hP3-91-Ijm"/>
+                        <outlet property="button7" destination="Ou5-DB-AJF" id="OsS-Lb-nsZ"/>
+                        <outlet property="button8" destination="KoS-jn-QSl" id="pPy-v7-qwv"/>
+                        <outlet property="button9" destination="cds-5x-AKp" id="39t-zt-VG3"/>
+                        <outlet property="buttonEnter" destination="Y6e-5g-WgP" id="fdB-LX-ZjC"/>
+                        <outlet property="cancelButton" destination="HnK-2y-gwH" id="67f-76-NtW"/>
+                        <outlet property="deleteButton" destination="HUt-hE-204" id="CD3-xn-cpd"/>
+                        <outlet property="enterPasscodeLabel" destination="Tqh-9t-HRJ" id="InF-1A-RPK"/>
+                        <outlet property="faceIdButton" destination="zwD-5i-cCG" id="6EH-rg-HBY"/>
+                        <outlet property="timerLabel" destination="y3P-hq-TKL" id="ckt-Lp-eM4"/>
+                        <outlet property="timerLabelToTopConstrainte" destination="RPI-oC-AMM" id="5PH-5P-hnM"/>
+                        <outlet property="viewOfButton" destination="A9E-Su-Qhb" id="S9P-IR-Kh7"/>
+                        <outlet property="viewOfButtonToTop" destination="7i9-03-Pp6" id="4of-GI-6JQ"/>
+                        <outletCollection property="placeholders" destination="Did-vj-cZX" collectionClass="NSMutableArray" id="Ypw-rF-G7G"/>
+                        <outletCollection property="placeholders" destination="x12-9y-fvp" collectionClass="NSMutableArray" id="AOC-WN-VvT"/>
+                        <outletCollection property="placeholders" destination="TNE-dM-hjd" collectionClass="NSMutableArray" id="vri-0d-sau"/>
+                        <outletCollection property="placeholders" destination="ApA-AX-AC4" collectionClass="NSMutableArray" id="SbG-cL-C0a"/>
+                        <outletCollection property="placeholders" destination="E1h-T7-8tI" collectionClass="NSMutableArray" id="fuC-IR-by9"/>
+                        <outletCollection property="placeholders" destination="yac-W4-Ljh" collectionClass="NSMutableArray" id="O9r-OA-HHC"/>
+                        <outletCollection property="placeholders" destination="VSd-xC-OYy" collectionClass="NSMutableArray" id="BV2-1Q-JVC"/>
+                        <outletCollection property="placeholders" destination="iUA-ey-zga" collectionClass="NSMutableArray" id="8Tr-ln-k2U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
