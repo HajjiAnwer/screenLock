@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		F2151CFC24D8510F0067A1B5 /* ButtonPasscode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2151CFB24D8510F0067A1B5 /* ButtonPasscode.swift */; };
 		F2151CFF24D85DA70067A1B5 /* PasscodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2151CFE24D85DA70067A1B5 /* PasscodeManager.swift */; };
 		F2151D0124D85FAA0067A1B5 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2151D0024D85FAA0067A1B5 /* KeychainService.swift */; };
+		F2711DFC24D9A87E0058D85D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2711DFB24D9A87E0058D85D /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		F2151CFB24D8510F0067A1B5 /* ButtonPasscode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPasscode.swift; sourceTree = "<group>"; };
 		F2151CFE24D85DA70067A1B5 /* PasscodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeManager.swift; sourceTree = "<group>"; };
 		F2151D0024D85FAA0067A1B5 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		F2711DFB24D9A87E0058D85D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +66,6 @@
 				D6883E5156F75A84BD12C0D0 /* Pods-LockScreenProject.debug.xcconfig */,
 				D28C25B6C581B6596DD410C0 /* Pods-LockScreenProject.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -92,6 +93,7 @@
 				F2151CE524D8482C0067A1B5 /* AppDelegate.swift */,
 				F2151CE724D8482C0067A1B5 /* SceneDelegate.swift */,
 				F2151CE924D8482C0067A1B5 /* ViewController.swift */,
+				F2711DFB24D9A87E0058D85D /* MainViewController.swift */,
 				F2151CFE24D85DA70067A1B5 /* PasscodeManager.swift */,
 				F2151D0024D85FAA0067A1B5 /* KeychainService.swift */,
 				F2151CFD24D856CE0067A1B5 /* UIView */,
@@ -234,6 +236,7 @@
 				F2151D0124D85FAA0067A1B5 /* KeychainService.swift in Sources */,
 				F2151CFA24D84A970067A1B5 /* PasscodePlaceholderUIView.swift in Sources */,
 				F2151CE824D8482C0067A1B5 /* SceneDelegate.swift in Sources */,
+				F2711DFC24D9A87E0058D85D /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

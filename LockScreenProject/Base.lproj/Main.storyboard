@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W9C-BA-p5P">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,12 +10,21 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LockScreenProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="lockScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="LockScreenProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7r-yl-Kq0" userLabel="placeHolder">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter passcode" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqh-9t-HRJ">
+                                <rect key="frame" x="20" y="83" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CnC-Re-Dqg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7r-yl-Kq0" userLabel="placeHolder8degits">
                                 <rect key="frame" x="108" y="133" width="198" height="16"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Did-vj-cZX" userLabel="placeHolder1" customClass="PasscodePlaceholder" customModule="LockScreenProject" customModuleProvider="target">
@@ -192,6 +201,231 @@
                                     <constraint firstItem="TNE-dM-hjd" firstAttribute="leading" secondItem="x12-9y-fvp" secondAttribute="trailing" constant="10" id="tbN-WL-K3N"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATg-SN-rVn" userLabel="placeHolder4degits">
+                                <rect key="frame" x="157.5" y="133" width="99" height="16"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJt-n4-BSO" userLabel="placeholder4degit1" customClass="PasscodePlaceholder" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="0.0" width="16" height="16"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="JZz-TA-26v"/>
+                                            <constraint firstAttribute="width" constant="16" id="oD2-bN-Ihj"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
+                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPl-cT-81x" userLabel="placeholder4degit2" customClass="PasscodePlaceholder" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="28" y="0.0" width="16" height="16"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="NX0-mI-QVo"/>
+                                            <constraint firstAttribute="width" constant="16" id="O9V-MT-902"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
+                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rqR-Bi-Kso" userLabel="placeholder4degit3" customClass="PasscodePlaceholder" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="54" y="0.0" width="16" height="16"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="Dv2-Eo-f42"/>
+                                            <constraint firstAttribute="height" constant="16" id="xfw-bE-ZGA"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
+                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyL-ab-n8l" userLabel="placeholder4degit4" customClass="PasscodePlaceholder" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="80" y="0.0" width="16" height="16"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="NHi-Cm-iSh"/>
+                                            <constraint firstAttribute="height" constant="16" id="P8N-C3-RKF"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
+                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rqR-Bi-Kso" firstAttribute="height" secondItem="dJt-n4-BSO" secondAttribute="height" id="0mb-XX-MLB"/>
+                                    <constraint firstItem="dJt-n4-BSO" firstAttribute="top" secondItem="ATg-SN-rVn" secondAttribute="top" id="4dv-Dk-YPe"/>
+                                    <constraint firstItem="iyL-ab-n8l" firstAttribute="width" secondItem="dJt-n4-BSO" secondAttribute="width" id="6bW-kZ-7ao"/>
+                                    <constraint firstItem="FPl-cT-81x" firstAttribute="leading" secondItem="dJt-n4-BSO" secondAttribute="trailing" constant="10" id="7TB-Wb-Fyh"/>
+                                    <constraint firstItem="FPl-cT-81x" firstAttribute="height" secondItem="dJt-n4-BSO" secondAttribute="height" id="AaI-3o-upT"/>
+                                    <constraint firstItem="rqR-Bi-Kso" firstAttribute="width" secondItem="dJt-n4-BSO" secondAttribute="width" id="Asq-cC-skj"/>
+                                    <constraint firstItem="FPl-cT-81x" firstAttribute="width" secondItem="dJt-n4-BSO" secondAttribute="width" id="BMb-G8-Ksg"/>
+                                    <constraint firstItem="iyL-ab-n8l" firstAttribute="top" secondItem="dJt-n4-BSO" secondAttribute="top" id="ChT-Ln-aIy"/>
+                                    <constraint firstAttribute="height" constant="16" id="G2u-9U-fNr"/>
+                                    <constraint firstAttribute="width" constant="99" id="KV7-Ls-lPZ"/>
+                                    <constraint firstItem="dJt-n4-BSO" firstAttribute="leading" secondItem="ATg-SN-rVn" secondAttribute="leading" constant="2" id="MZn-sI-OS4"/>
+                                    <constraint firstItem="iyL-ab-n8l" firstAttribute="height" secondItem="dJt-n4-BSO" secondAttribute="height" id="PSo-8r-CqV"/>
+                                    <constraint firstItem="FPl-cT-81x" firstAttribute="leading" secondItem="dJt-n4-BSO" secondAttribute="trailing" constant="10" id="VRH-wv-pGB"/>
+                                    <constraint firstItem="rqR-Bi-Kso" firstAttribute="leading" secondItem="FPl-cT-81x" secondAttribute="trailing" constant="10" id="a1d-ix-Fqg"/>
+                                    <constraint firstItem="iyL-ab-n8l" firstAttribute="leading" secondItem="rqR-Bi-Kso" secondAttribute="trailing" constant="10" id="fk0-PX-XsP"/>
+                                    <constraint firstItem="rqR-Bi-Kso" firstAttribute="top" secondItem="dJt-n4-BSO" secondAttribute="top" id="iEX-Jn-A7T"/>
+                                    <constraint firstItem="FPl-cT-81x" firstAttribute="top" secondItem="dJt-n4-BSO" secondAttribute="top" id="pq2-Gy-3T1"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0DY-uO-52L" userLabel="placeHolder6degits">
+                                <rect key="frame" x="133" y="133" width="148.5" height="16"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qW7-3y-lEN" userLabel="placeholder6degit1" customClass="PasscodePlaceholder" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="1" y="0.0" width="16" height="16"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="RYe-a3-mgC"/>
+                                            <constraint firstAttribute="height" constant="16" id="pH7-vI-0VH"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
+                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vzr-RC-bIF" userLabel="placeholder6degit2" customClass="PasscodePlaceholder" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="27" y="0.0" width="16" height="16"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
+                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVD-EX-UZi" userLabel="placeholder6degit3" customClass="PasscodePlaceholder" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="53" y="0.0" width="16" height="16"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
+                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="flP-hv-FOu" userLabel="placeholder6degit4" customClass="PasscodePlaceholder" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="79" y="0.0" width="16" height="16"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
+                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTd-9D-rXS" userLabel="placeholder6degit5" customClass="PasscodePlaceholder" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="105" y="0.0" width="16" height="16"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
+                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g12-v1-oa7" userLabel="placeholder6degit6" customClass="PasscodePlaceholder" customModule="LockScreenProject" customModuleProvider="target">
+                                        <rect key="frame" x="131" y="0.0" width="16" height="16"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                <color key="value" red="0.4549019608" green="0.59999999999999998" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="errorColor">
+                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vzr-RC-bIF" firstAttribute="height" secondItem="qW7-3y-lEN" secondAttribute="height" id="0lo-ru-mEa"/>
+                                    <constraint firstItem="g12-v1-oa7" firstAttribute="top" secondItem="qW7-3y-lEN" secondAttribute="top" id="3a8-aT-UvZ"/>
+                                    <constraint firstItem="vzr-RC-bIF" firstAttribute="leading" secondItem="qW7-3y-lEN" secondAttribute="trailing" constant="10" id="A6w-xm-yle"/>
+                                    <constraint firstItem="iTd-9D-rXS" firstAttribute="height" secondItem="qW7-3y-lEN" secondAttribute="height" id="BPU-Nm-cgH"/>
+                                    <constraint firstItem="iTd-9D-rXS" firstAttribute="top" secondItem="qW7-3y-lEN" secondAttribute="top" id="C9x-TQ-yIF"/>
+                                    <constraint firstItem="flP-hv-FOu" firstAttribute="leading" secondItem="nVD-EX-UZi" secondAttribute="trailing" constant="10" id="DlX-9f-VTc"/>
+                                    <constraint firstItem="nVD-EX-UZi" firstAttribute="leading" secondItem="vzr-RC-bIF" secondAttribute="trailing" constant="10" id="DtS-0x-rKp"/>
+                                    <constraint firstItem="g12-v1-oa7" firstAttribute="leading" secondItem="iTd-9D-rXS" secondAttribute="trailing" constant="10" id="EkJ-aB-fqG"/>
+                                    <constraint firstItem="iTd-9D-rXS" firstAttribute="width" secondItem="qW7-3y-lEN" secondAttribute="width" id="HfJ-2R-vI5"/>
+                                    <constraint firstItem="qW7-3y-lEN" firstAttribute="top" secondItem="0DY-uO-52L" secondAttribute="top" id="P5X-f2-m4A"/>
+                                    <constraint firstAttribute="height" constant="16" id="RGR-L0-MHL"/>
+                                    <constraint firstItem="iTd-9D-rXS" firstAttribute="leading" secondItem="flP-hv-FOu" secondAttribute="trailing" constant="10" id="T8k-uO-ThC"/>
+                                    <constraint firstItem="nVD-EX-UZi" firstAttribute="height" secondItem="qW7-3y-lEN" secondAttribute="height" id="Ude-wf-JZ7"/>
+                                    <constraint firstItem="g12-v1-oa7" firstAttribute="height" secondItem="qW7-3y-lEN" secondAttribute="height" id="aKL-5u-Y3g"/>
+                                    <constraint firstAttribute="width" constant="148.5" id="e8Y-iL-MrQ"/>
+                                    <constraint firstItem="vzr-RC-bIF" firstAttribute="top" secondItem="qW7-3y-lEN" secondAttribute="top" id="hu7-ze-0Sf"/>
+                                    <constraint firstItem="g12-v1-oa7" firstAttribute="width" secondItem="qW7-3y-lEN" secondAttribute="width" id="i7T-Rn-gYm"/>
+                                    <constraint firstItem="qW7-3y-lEN" firstAttribute="leading" secondItem="0DY-uO-52L" secondAttribute="leading" constant="1" id="mgd-bi-58i"/>
+                                    <constraint firstItem="vzr-RC-bIF" firstAttribute="width" secondItem="qW7-3y-lEN" secondAttribute="width" id="s6o-fd-loj"/>
+                                    <constraint firstItem="flP-hv-FOu" firstAttribute="height" secondItem="qW7-3y-lEN" secondAttribute="height" id="uzn-8t-lQT"/>
+                                    <constraint firstItem="flP-hv-FOu" firstAttribute="width" secondItem="qW7-3y-lEN" secondAttribute="width" id="vKc-cG-3QN"/>
+                                    <constraint firstItem="flP-hv-FOu" firstAttribute="top" secondItem="qW7-3y-lEN" secondAttribute="top" id="vNc-De-VeS"/>
+                                    <constraint firstItem="nVD-EX-UZi" firstAttribute="top" secondItem="qW7-3y-lEN" secondAttribute="top" id="wgB-2o-59g"/>
+                                    <constraint firstItem="nVD-EX-UZi" firstAttribute="width" secondItem="qW7-3y-lEN" secondAttribute="width" id="zkK-IS-faS"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9E-Su-Qhb" userLabel="viewButton">
                                 <rect key="frame" x="87" y="173" width="240" height="343"/>
                                 <subviews>
@@ -355,7 +589,7 @@
                                             <action selector="button0DidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f0X-g5-GZM"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUt-hE-204" customClass="ButtonPasscode" customModule="LockScreenProject" customModuleProvider="target">
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUt-hE-204" customClass="ButtonPasscode" customModule="LockScreenProject" customModuleProvider="target">
                                         <rect key="frame" x="178" y="212" width="60" height="60"/>
                                         <state key="normal" title="Delete"/>
                                         <userDefinedRuntimeAttributes>
@@ -371,7 +605,7 @@
                                             <action selector="deleteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QyT-hE-2mv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnK-2y-gwH" customClass="ButtonPasscode" customModule="LockScreenProject" customModuleProvider="target">
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnK-2y-gwH" customClass="ButtonPasscode" customModule="LockScreenProject" customModuleProvider="target">
                                         <rect key="frame" x="2" y="212" width="60" height="60"/>
                                         <state key="normal" title="Cancel"/>
                                         <userDefinedRuntimeAttributes>
@@ -387,7 +621,7 @@
                                             <action selector="cancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ctP-sw-nQg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6e-5g-WgP" customClass="ButtonPasscode" customModule="LockScreenProject" customModuleProvider="target">
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6e-5g-WgP" customClass="ButtonPasscode" customModule="LockScreenProject" customModuleProvider="target">
                                         <rect key="frame" x="90" y="282" width="60" height="60"/>
                                         <state key="normal" title="Enter"/>
                                         <userDefinedRuntimeAttributes>
@@ -469,32 +703,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter passcode" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqh-9t-HRJ">
-                                <rect key="frame" x="67.5" y="83" width="279" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="CnC-Re-Dqg"/>
-                                    <constraint firstAttribute="width" constant="279" id="asD-iV-ELe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="y3P-hq-TKL" firstAttribute="width" secondItem="T7r-yl-Kq0" secondAttribute="width" id="0fL-3Z-uvS"/>
                             <constraint firstItem="Tqh-9t-HRJ" firstAttribute="centerX" secondItem="T7r-yl-Kq0" secondAttribute="centerX" id="1u5-QL-vVa"/>
                             <constraint firstItem="zwD-5i-cCG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2lS-SY-kB9"/>
+                            <constraint firstItem="ATg-SN-rVn" firstAttribute="top" secondItem="Tqh-9t-HRJ" secondAttribute="bottom" constant="20" id="3dW-Cf-nNk"/>
+                            <constraint firstItem="ATg-SN-rVn" firstAttribute="centerX" secondItem="Tqh-9t-HRJ" secondAttribute="centerX" id="3qf-cl-TQz"/>
                             <constraint firstItem="Tqh-9t-HRJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6DB-sh-uYc"/>
                             <constraint firstItem="A9E-Su-Qhb" firstAttribute="top" secondItem="T7r-yl-Kq0" secondAttribute="bottom" constant="24" id="7i9-03-Pp6"/>
+                            <constraint firstItem="0DY-uO-52L" firstAttribute="top" secondItem="Tqh-9t-HRJ" secondAttribute="bottom" constant="20" id="BhR-ck-v6A"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zwD-5i-cCG" secondAttribute="bottom" constant="14" id="KPe-oB-z7W"/>
                             <constraint firstItem="zwD-5i-cCG" firstAttribute="centerX" secondItem="YPG-TY-cJB" secondAttribute="centerX" id="N7Y-CN-Fnk"/>
                             <constraint firstItem="y3P-hq-TKL" firstAttribute="top" secondItem="T7r-yl-Kq0" secondAttribute="bottom" constant="20" id="RPI-oC-AMM"/>
                             <constraint firstItem="zwD-5i-cCG" firstAttribute="top" secondItem="YPG-TY-cJB" secondAttribute="bottom" constant="15" id="ghU-yV-AoK"/>
                             <constraint firstItem="T7r-yl-Kq0" firstAttribute="top" secondItem="Tqh-9t-HRJ" secondAttribute="bottom" constant="20" id="i0U-aH-L52"/>
+                            <constraint firstItem="0DY-uO-52L" firstAttribute="centerX" secondItem="Tqh-9t-HRJ" secondAttribute="centerX" id="oZK-eg-FS3"/>
+                            <constraint firstItem="Tqh-9t-HRJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qu8-Dp-H8g"/>
                             <constraint firstItem="A9E-Su-Qhb" firstAttribute="centerX" secondItem="T7r-yl-Kq0" secondAttribute="centerX" id="uR8-Ev-GZR"/>
                             <constraint firstItem="Tqh-9t-HRJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="uSg-HA-lvC"/>
                             <constraint firstItem="y3P-hq-TKL" firstAttribute="centerX" secondItem="T7r-yl-Kq0" secondAttribute="centerX" id="weX-XL-mqS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tqh-9t-HRJ" secondAttribute="trailing" constant="20" id="wfo-gj-gEg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -518,19 +748,77 @@
                         <outlet property="timerLabelToTopConstrainte" destination="RPI-oC-AMM" id="5PH-5P-hnM"/>
                         <outlet property="viewOfButton" destination="A9E-Su-Qhb" id="S9P-IR-Kh7"/>
                         <outlet property="viewOfButtonToTop" destination="7i9-03-Pp6" id="4of-GI-6JQ"/>
-                        <outletCollection property="placeholders" destination="Did-vj-cZX" collectionClass="NSMutableArray" id="Ypw-rF-G7G"/>
-                        <outletCollection property="placeholders" destination="x12-9y-fvp" collectionClass="NSMutableArray" id="AOC-WN-VvT"/>
-                        <outletCollection property="placeholders" destination="TNE-dM-hjd" collectionClass="NSMutableArray" id="vri-0d-sau"/>
-                        <outletCollection property="placeholders" destination="ApA-AX-AC4" collectionClass="NSMutableArray" id="SbG-cL-C0a"/>
-                        <outletCollection property="placeholders" destination="E1h-T7-8tI" collectionClass="NSMutableArray" id="fuC-IR-by9"/>
-                        <outletCollection property="placeholders" destination="yac-W4-Ljh" collectionClass="NSMutableArray" id="O9r-OA-HHC"/>
-                        <outletCollection property="placeholders" destination="VSd-xC-OYy" collectionClass="NSMutableArray" id="BV2-1Q-JVC"/>
-                        <outletCollection property="placeholders" destination="iUA-ey-zga" collectionClass="NSMutableArray" id="8Tr-ln-k2U"/>
+                        <outlet property="viewOfPlaceholders4Degits" destination="ATg-SN-rVn" id="bro-yL-KVW"/>
+                        <outlet property="viewOfPlaceholders6Degits" destination="0DY-uO-52L" id="EoE-Ra-FDQ"/>
+                        <outlet property="viewOfplaceholders8degits" destination="T7r-yl-Kq0" id="A26-kb-JNa"/>
+                        <outletCollection property="placeholders8degits" destination="Did-vj-cZX" collectionClass="NSMutableArray" id="Ypw-rF-G7G"/>
+                        <outletCollection property="placeholders8degits" destination="x12-9y-fvp" collectionClass="NSMutableArray" id="AOC-WN-VvT"/>
+                        <outletCollection property="placeholders8degits" destination="TNE-dM-hjd" collectionClass="NSMutableArray" id="vri-0d-sau"/>
+                        <outletCollection property="placeholders8degits" destination="ApA-AX-AC4" collectionClass="NSMutableArray" id="SbG-cL-C0a"/>
+                        <outletCollection property="placeholders8degits" destination="E1h-T7-8tI" collectionClass="NSMutableArray" id="fuC-IR-by9"/>
+                        <outletCollection property="placeholders8degits" destination="yac-W4-Ljh" collectionClass="NSMutableArray" id="O9r-OA-HHC"/>
+                        <outletCollection property="placeholders8degits" destination="VSd-xC-OYy" collectionClass="NSMutableArray" id="BV2-1Q-JVC"/>
+                        <outletCollection property="placeholders8degits" destination="iUA-ey-zga" collectionClass="NSMutableArray" id="8Tr-ln-k2U"/>
+                        <outletCollection property="placeholders4degits" destination="dJt-n4-BSO" collectionClass="NSMutableArray" id="vn9-Ix-wqu"/>
+                        <outletCollection property="placeholders4degits" destination="FPl-cT-81x" collectionClass="NSMutableArray" id="60r-Bi-Euo"/>
+                        <outletCollection property="placeholders4degits" destination="rqR-Bi-Kso" collectionClass="NSMutableArray" id="COh-Jw-NjN"/>
+                        <outletCollection property="placeholders4degits" destination="iyL-ab-n8l" collectionClass="NSMutableArray" id="5hf-Hh-fDr"/>
+                        <outletCollection property="placeholders6degits" destination="qW7-3y-lEN" collectionClass="NSMutableArray" id="2zf-ie-yup"/>
+                        <outletCollection property="placeholders6degits" destination="vzr-RC-bIF" collectionClass="NSMutableArray" id="O8b-Ib-FzS"/>
+                        <outletCollection property="placeholders6degits" destination="nVD-EX-UZi" collectionClass="NSMutableArray" id="RyQ-BY-XtS"/>
+                        <outletCollection property="placeholders6degits" destination="flP-hv-FOu" collectionClass="NSMutableArray" id="7jR-p7-71N"/>
+                        <outletCollection property="placeholders6degits" destination="iTd-9D-rXS" collectionClass="NSMutableArray" id="Rxr-U6-Esz"/>
+                        <outletCollection property="placeholders6degits" destination="g12-v1-oa7" collectionClass="NSMutableArray" id="bdP-5I-YTb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+            <point key="canvasLocation" x="678" y="159"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="FKx-xY-HsB">
+            <objects>
+                <viewController storyboardIdentifier="main" id="W9C-BA-p5P" customClass="MainViewController" customModule="LockScreenProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6U0-7O-hV8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome in our app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAk-6A-MEr">
+                                <rect key="frame" x="44" y="242" width="326" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="eWF-mI-U5s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="main" text="successful login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2Z-wZ-50b">
+                                <rect key="frame" x="150.5" y="293" width="113.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="npb-Bh-jPr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bAk-6A-MEr" firstAttribute="top" secondItem="UHx-HC-VWZ" secondAttribute="top" constant="198" id="INW-t7-Nmb"/>
+                            <constraint firstItem="n2Z-wZ-50b" firstAttribute="centerX" secondItem="bAk-6A-MEr" secondAttribute="centerX" id="fXd-iE-aMT"/>
+                            <constraint firstItem="UHx-HC-VWZ" firstAttribute="trailing" secondItem="bAk-6A-MEr" secondAttribute="trailing" constant="44" id="g4F-vG-6VW"/>
+                            <constraint firstItem="n2Z-wZ-50b" firstAttribute="top" secondItem="bAk-6A-MEr" secondAttribute="bottom" constant="30" id="kwS-10-6wH"/>
+                            <constraint firstItem="bAk-6A-MEr" firstAttribute="leading" secondItem="UHx-HC-VWZ" secondAttribute="leading" constant="44" id="mgy-mE-kn6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UHx-HC-VWZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginLabel" destination="n2Z-wZ-50b" id="0NW-1Q-ZND"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BbN-U5-dp0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12" y="153"/>
         </scene>
     </scenes>
 </document>

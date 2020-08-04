@@ -6,6 +6,7 @@
 //  Copyright © 2020 spare.
 
 import Foundation
+import UIKit
 
 class PasscodeManager {
     
@@ -15,6 +16,9 @@ class PasscodeManager {
     var dateToEnterForground : Date?
     var second = 00
     var minute = 00
+    var privacyProtectionWindow : UIWindow?
+    var backgroundMode : Bool = false
+    var screenLocked : Bool = false
     
     var hasPasscode : Bool {
         get {
@@ -39,7 +43,31 @@ class PasscodeManager {
                 return false
             }
         }
-        
+    }
+    
+    func navigateToMainPage(view : UIViewController) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "main") as! MainViewController
+        vc.sourceController = 1
+        view.show(vc, sender: nil)
+    }
+    
+    func navigateToLockPage(view : UIViewController) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "lockScreen") as! ViewController
+        view.show(vc, sender: nil)
+    }
+    
+    func showLockScreen() {
+        privacyProtectionWindow = UIWindow(frame: UIScreen.main.bounds)
+        privacyProtectionWindow?.rootViewController = ViewController()
+        privacyProtectionWindow?.windowLevel = .alert + 1
+        privacyProtectionWindow?.makeKeyAndVisible()
+    }
+    
+    func hideLockScreen() {
+        privacyProtectionWindow?.isHidden = true
+        privacyProtectionWindow = nil
     }
     
 }
