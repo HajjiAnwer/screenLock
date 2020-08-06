@@ -9,10 +9,10 @@
 import UIKit
 import SwiftDate
 
+@available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
@@ -32,18 +32,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func sceneWillEnterForeground(_ scene: UIScene) {
-        if PasscodeManager.shared.backgroundMode && !PasscodeManager.shared.screenLocked {
-            PasscodeManager.shared.navigateToLockPage(view: window?.rootViewController ?? UIViewController())
+        if NavigatorManager.shared.backgroundMode && !NavigatorManager.shared.screenLocked {
+            NavigatorManager.shared.navigateToLockPage()
         }
-        if PasscodeManager.shared.screenLocked {
-            PasscodeManager.shared.dateToEnterForground = Date()
-            PasscodeManager.shared.second += Int(PasscodeManager.shared.dateToEnterBackground?.getInterval(toDate: PasscodeManager.shared.dateToEnterForground ?? Date(), component: .second) ?? 0)
+        if NavigatorManager.shared.screenLocked {
+            NavigatorManager.shared.dateToEnterForground = Date()
+            NavigatorManager.shared.second += Int(NavigatorManager.shared.dateToEnterBackground?.getInterval(toDate: NavigatorManager.shared.dateToEnterForground ?? Date(), component: .second) ?? 0)
         }
     }
     
     func sceneDidEnterBackground(_ scene: UIScene) {
-        PasscodeManager.shared.backgroundMode = true
-        PasscodeManager.shared.dateToEnterBackground = Date()
+        NavigatorManager.shared.backgroundMode = true
+        NavigatorManager.shared.dateToEnterBackground = Date()
     }
     
     

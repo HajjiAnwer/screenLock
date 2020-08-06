@@ -18,7 +18,12 @@
 		F2151CFC24D8510F0067A1B5 /* ButtonPasscode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2151CFB24D8510F0067A1B5 /* ButtonPasscode.swift */; };
 		F2151CFF24D85DA70067A1B5 /* PasscodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2151CFE24D85DA70067A1B5 /* PasscodeManager.swift */; };
 		F2151D0124D85FAA0067A1B5 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2151D0024D85FAA0067A1B5 /* KeychainService.swift */; };
+		F24645D824DC1C9C006C7C50 /* SecureStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24645D724DC1C9C006C7C50 /* SecureStoreError.swift */; };
+		F24645DA24DC20F6006C7C50 /* ExtensionUIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24645D924DC20F6006C7C50 /* ExtensionUIApplication.swift */; };
+		F24645DC24DC2332006C7C50 /* NavigatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24645DB24DC2332006C7C50 /* NavigatorManager.swift */; };
+		F24645DE24DC4C84006C7C50 /* KeychainStoreQueryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24645DD24DC4C84006C7C50 /* KeychainStoreQueryable.swift */; };
 		F2711DFC24D9A87E0058D85D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2711DFB24D9A87E0058D85D /* MainViewController.swift */; };
+		F2F1E26124DC6BDE00E28EF7 /* KeychainClassItemEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F1E26024DC6BDE00E28EF7 /* KeychainClassItemEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +42,12 @@
 		F2151CFB24D8510F0067A1B5 /* ButtonPasscode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPasscode.swift; sourceTree = "<group>"; };
 		F2151CFE24D85DA70067A1B5 /* PasscodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeManager.swift; sourceTree = "<group>"; };
 		F2151D0024D85FAA0067A1B5 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		F24645D724DC1C9C006C7C50 /* SecureStoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStoreError.swift; sourceTree = "<group>"; };
+		F24645D924DC20F6006C7C50 /* ExtensionUIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIApplication.swift; sourceTree = "<group>"; };
+		F24645DB24DC2332006C7C50 /* NavigatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorManager.swift; sourceTree = "<group>"; };
+		F24645DD24DC4C84006C7C50 /* KeychainStoreQueryable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStoreQueryable.swift; sourceTree = "<group>"; };
 		F2711DFB24D9A87E0058D85D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F2F1E26024DC6BDE00E28EF7 /* KeychainClassItemEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainClassItemEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,13 +100,15 @@
 		F2151CE424D8482C0067A1B5 /* LockScreenProject */ = {
 			isa = PBXGroup;
 			children = (
+				F24645DF24DC682F006C7C50 /* ErrorHandler */,
+				F24645E024DC6840006C7C50 /* KeychainService */,
+				F24645E124DC6865006C7C50 /* Extension */,
+				F24645E224DC6874006C7C50 /* Manager */,
+				F2151CFD24D856CE0067A1B5 /* UIView */,
 				F2151CE524D8482C0067A1B5 /* AppDelegate.swift */,
 				F2151CE724D8482C0067A1B5 /* SceneDelegate.swift */,
 				F2151CE924D8482C0067A1B5 /* ViewController.swift */,
 				F2711DFB24D9A87E0058D85D /* MainViewController.swift */,
-				F2151CFE24D85DA70067A1B5 /* PasscodeManager.swift */,
-				F2151D0024D85FAA0067A1B5 /* KeychainService.swift */,
-				F2151CFD24D856CE0067A1B5 /* UIView */,
 				F2151CEB24D8482C0067A1B5 /* Main.storyboard */,
 				F2151CEE24D8482F0067A1B5 /* Assets.xcassets */,
 				F2151CF024D8482F0067A1B5 /* LaunchScreen.storyboard */,
@@ -112,6 +124,41 @@
 				F2151CFB24D8510F0067A1B5 /* ButtonPasscode.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		F24645DF24DC682F006C7C50 /* ErrorHandler */ = {
+			isa = PBXGroup;
+			children = (
+				F24645D724DC1C9C006C7C50 /* SecureStoreError.swift */,
+			);
+			path = ErrorHandler;
+			sourceTree = "<group>";
+		};
+		F24645E024DC6840006C7C50 /* KeychainService */ = {
+			isa = PBXGroup;
+			children = (
+				F2151D0024D85FAA0067A1B5 /* KeychainService.swift */,
+				F24645DD24DC4C84006C7C50 /* KeychainStoreQueryable.swift */,
+				F2151CFE24D85DA70067A1B5 /* PasscodeManager.swift */,
+				F2F1E26024DC6BDE00E28EF7 /* KeychainClassItemEnum.swift */,
+			);
+			path = KeychainService;
+			sourceTree = "<group>";
+		};
+		F24645E124DC6865006C7C50 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F24645D924DC20F6006C7C50 /* ExtensionUIApplication.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F24645E224DC6874006C7C50 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F24645DB24DC2332006C7C50 /* NavigatorManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,10 +280,15 @@
 				F2151CFF24D85DA70067A1B5 /* PasscodeManager.swift in Sources */,
 				F2151CE624D8482C0067A1B5 /* AppDelegate.swift in Sources */,
 				F2151CFC24D8510F0067A1B5 /* ButtonPasscode.swift in Sources */,
+				F2F1E26124DC6BDE00E28EF7 /* KeychainClassItemEnum.swift in Sources */,
 				F2151D0124D85FAA0067A1B5 /* KeychainService.swift in Sources */,
+				F24645DC24DC2332006C7C50 /* NavigatorManager.swift in Sources */,
 				F2151CFA24D84A970067A1B5 /* PasscodePlaceholderUIView.swift in Sources */,
+				F24645DA24DC20F6006C7C50 /* ExtensionUIApplication.swift in Sources */,
 				F2151CE824D8482C0067A1B5 /* SceneDelegate.swift in Sources */,
 				F2711DFC24D9A87E0058D85D /* MainViewController.swift in Sources */,
+				F24645DE24DC4C84006C7C50 /* KeychainStoreQueryable.swift in Sources */,
+				F24645D824DC1C9C006C7C50 /* SecureStoreError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +436,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9J684Q34M8;
 				INFOPLIST_FILE = LockScreenProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -403,6 +456,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9J684Q34M8;
 				INFOPLIST_FILE = LockScreenProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

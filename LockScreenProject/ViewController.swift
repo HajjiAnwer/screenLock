@@ -42,6 +42,7 @@ class ViewController: UIViewController {
     var arrayTagButton = [String]()
     var confirmed = false
     var placeholder : [PasscodePlaceholder] = [PasscodePlaceholder]()
+    var keychainClassItem = KeychainCalssItemEnum.GenericPassword
     override func viewDidLoad() {
         super.viewDidLoad()
         randomizeButton()
@@ -77,19 +78,20 @@ class ViewController: UIViewController {
     }
     
     func checkPasscode() {
-        if PasscodeManager.shared.hasPasscode {
-            if (PasscodeManager.shared.passcode != ""){
-                if PasscodeManager.shared.passcode.count == 4 {
+        print(NavigatorManager.shared.service)
+        if PasscodeManager(keyChainClassItem: keychainClassItem).hasPasscode {
+            if (PasscodeManager(keyChainClassItem: keychainClassItem).passcode != ""){
+                if PasscodeManager(keyChainClassItem: keychainClassItem).passcode.count == 4 {
                     viewOfPlaceholders4Degits.isHidden = false
                     viewOfPlaceholders6Degits.isHidden = true
                     viewOfplaceholders8degits.isHidden = true
                     placeholder = placeholders4degits
-                } else if PasscodeManager.shared.passcode.count == 6 {
+                } else if PasscodeManager(keyChainClassItem: keychainClassItem).passcode.count == 6 {
                     viewOfPlaceholders4Degits.isHidden = true
                     viewOfPlaceholders6Degits.isHidden = false
                     viewOfplaceholders8degits.isHidden = true
                     placeholder = placeholders6degits
-                } else if PasscodeManager.shared.passcode.count == 8 {
+                } else if PasscodeManager(keyChainClassItem: keychainClassItem).passcode.count == 8 {
                     viewOfPlaceholders4Degits.isHidden = true
                     viewOfPlaceholders6Degits.isHidden = true
                     viewOfplaceholders8degits.isHidden = false
@@ -108,7 +110,6 @@ class ViewController: UIViewController {
             enterPasscodeLabel.text = "create your passcode"
             enterPasscodeLabel.textColor = .black
         }
-        print(placeholder.count)
     }
     
     func runTimer(){
@@ -121,13 +122,13 @@ class ViewController: UIViewController {
     }
     
     @objc func updateTimer() {
-        PasscodeManager.shared.second += 1
-        PasscodeManager.shared.minute = PasscodeManager.shared.second / 60 % 60
-        if PasscodeManager.shared.minute < 1 {
-            timerLabel.text = timeString(time: TimeInterval(PasscodeManager.shared.second))
+        NavigatorManager.shared.second += 1
+        NavigatorManager.shared.minute = NavigatorManager.shared.second / 60 % 60
+        if NavigatorManager.shared.minute < 4 {
+            timerLabel.text = timeString(time: TimeInterval(NavigatorManager.shared.second))
         } else {
-            PasscodeManager.shared.second = 00
-            PasscodeManager.shared.minute = 00
+            NavigatorManager.shared.second = 00
+            NavigatorManager.shared.minute = 00
             timerLabel.text = "00:00:00"
             passcode = ""
             enableScreen()
@@ -147,7 +148,7 @@ class ViewController: UIViewController {
         enterPasscodeLabel.textColor = .black
         timerLabel.isHidden = true
         timer.invalidate()
-        PasscodeManager.shared.limitRetry = 0
+        NavigatorManager.shared.limitRetry = 0
         disableButtons()
     }
     
@@ -168,7 +169,7 @@ class ViewController: UIViewController {
     }
     
     func animatePlaceholders (passcodee : String) {
-        if PasscodeManager.shared.passcodeActive{
+        if PasscodeManager(keyChainClassItem: keychainClassItem).sessionActive{
             confirmed ? (confirmedPasscode.append(passcodee)) : (passcode.append(passcodee))
             confirmed ? (placeholder[confirmedPasscode.count - 1].animateState(.active)) : (placeholder[passcode.count - 1].animateState(.active))
             enableButtons()
@@ -251,8 +252,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func cancelButton(_ sender: ButtonPasscode) {
-        let data = Data(passcode.utf8)
-        if PasscodeManager.shared.hasPasscode {
+        if PasscodeManager(keyChainClassItem: keychainClassItem).hasPasscode {
             passcode.removeAll()
             disableButtons()
             enterPasscodeLabel.text = "Enter passcode"
@@ -280,14 +280,17 @@ class ViewController: UIViewController {
                 cancelButton.setTitle("confirm", for: .normal)
             } else {
                 if confirmedPasscode == passcode {
-                    let status = KeychainService.shared.save(key: "passcode", data: data)
-                    if status == noErr {
+                    do {
+                        try KeychainService(keychainClass: keychainClassItem.keychainItem).addOrUpdate(key: "passcode", data: passcode)
                         placeholder.forEach { (placeholder) in
                             placeholder.animateState(.inactive)
                         }
-                        PasscodeManager.shared.navigateToMainPage(view: self)
+                        NavigatorManager.shared.navigateToMainPage()
                         cancelButton.setTitle("cancel", for: .normal)
+                    } catch  {
+                        
                     }
+                    
                 } else {
                     enterPasscodeLabel.text = "invalid passcode"
                     enterPasscodeLabel.textColor = .red
@@ -302,12 +305,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonEnterDidTapped(_ sender: ButtonPasscode) {
-        if PasscodeManager.shared.passcode == passcode {
-            PasscodeManager.shared.navigateToMainPage(view: self)
-            PasscodeManager.shared.screenLocked = false
+        if PasscodeManager(keyChainClassItem: keychainClassItem).passcode == passcode {
+            NavigatorManager.shared.navigateToMainPage()
+            NavigatorManager.shared.screenLocked = false
         } else {
-            PasscodeManager.shared.limitRetry += 1
-            if PasscodeManager.shared.limitRetry < 4 {
+            NavigatorManager.shared.limitRetry += 1
+            if NavigatorManager.shared.limitRetry < 4 {
                 enterPasscodeLabel.text = "Invalid passcode"
                 enterPasscodeLabel.textColor = .red
                 randomizeButton()
@@ -316,7 +319,7 @@ class ViewController: UIViewController {
                 }
             } else {
                 disablePasscodeScreen()
-                PasscodeManager.shared.screenLocked = true
+                NavigatorManager.shared.screenLocked = true
                 for index in 0 ... (passcode.count - 1) {
                     placeholder[index].animateState(.inactive)
                 }
